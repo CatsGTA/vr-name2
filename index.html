@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUI Text</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgba(0, 0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const text = urlParams.get("text");
+        document.getElementById("text").innerText = text || "Hello World";
+    </script>
+</body>
+</html>
